@@ -2,100 +2,56 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Jrood's trendy index page</title>
-        <link href="res/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="res/jquery-2.1.0.min.js"></script>
-        <script src="res/bootstrap.min.js"></script>
-        <script src="script.js"></script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Jrood's trendy index page</title>
+    <link href="res/bootstrap.min.css" rel="stylesheet" />
+    <script src="res/jquery-2.1.0.min.js"></script>
+    <script src="res/bootstrap.min.js"></script>
+    <script src="res/knockout-3.0.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
 
-    <body>
-        
-        <audio id="song">
-            <source src="audio/Apricots in the Atmosphere.mp3" type="audio/mpeg" />
-            <p>Your browser is too old to render this element. Please use Chrome.</p>
-        </audio>
-
-
-        <div class="container">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <h1>Roodimentary Sciences</h1>
-
-                <div class="panel-group" id="accordion">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                    Samples of Current Projects
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                <div style="text-align: right">
-                                    <a id="play">play</a>
-                                    <a id="pause" style="display: none;">pause</a>
-                                    <span>Apricots in the Atmosphere</span>
+<body>
+    <div class="container">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1>Roodimentary Sciences</h1>
+            <div class="panel-group" id="accordion" data-bind="foreach: accordionLayout">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" data-bind="setHrefToGrandparentSibling: '', text: header">
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div data-bind="foreach: songs">
+                                <div class="playerArea">
+                                    <audio>
+                                        <source type="audio/mpeg" data-bind="attr: {src: url}" />
+                                    </audio>
+                                    <div style="text-align: right">
+                                        <a data-bind="audioControl: 'play'">play</a>
+                                        <a data-bind="audioControl: 'pause'" style="display: none;" class="pauseButton">pause</a>
+                                        <span data-bind="text: name"></span>
+                                    </div>
+                                    <div>
+                                        <div data-bind="audioControl: 'barArea'" class="barArea">
+                                            <div class="bar"></div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div id="thebararea" style="width: 100%; height: 10px" class="bg-info">
-                                    <div id="thebar" style="height: 10px; width: 0%;" class="bg-primary"></div>
-                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                    Album #2 - Freshly Squeezed Beats EP
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse">
-                            <div class="panel-body">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                    Album #1 - Roodimentary Sciences
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse">
-                            <div class="panel-body">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                                    About
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseFour" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                
-                            </div>
+                            <div data-bind="text: otherContent"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-2"></div>
-
         </div>
-
-    </body>
-
+        <div class="col-md-2"></div>
+    </div>
+</body>
 </html>

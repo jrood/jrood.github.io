@@ -1,14 +1,11 @@
 @font-face {
     font-family: BebasNeue;
-    src: url('fonts/BebasNeue.otf');
+    src: url('fonts/bebasneue-webfont.eot');
 }
 
 body {
     background-image: url('img/bg1.png');
     background-repeat: repeat;
-}
-
-div {
     font-family: BebasNeue;
     font-size: 18px;
     letter-spacing: 3px;
@@ -19,17 +16,38 @@ a {
 }
 
 h1 {
-    font-weight: normal;
     letter-spacing: 8px;
     line-height: 90%;
 }
 
 .panel-default > .panel-heading {
     background-color: white;
+
 }
+
+    .panel-default > .panel-heading > .panel-title > a {
+        font-size: 18px;
+    }
 
 .panel {
     background-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+.barArea {
+    background-color: rgba(66,139,202,.25);
+    width: 100%;
+    height: 8px;
+}
+
+.bar {
+    background-color: rgba(66,139,202,1);
+    height: 8px;
+    width: 0%;
+}
+
+.playerArea {
+    margin-bottom: 12px;
+    margin-bottom: 12px;
 }

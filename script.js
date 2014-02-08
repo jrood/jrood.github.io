@@ -1,33 +1,98 @@
+var accordionLayout = [
+    //{
+    //    header: "Samples of Current Projects",
+    //    songs: [
+    //        { name: "title", url: "" },
+    //        { name: "", url: "" }
+    //    ],
+    //    otherContent: ""
+    //},
+    {
+        header: "Album #2 - Freshly Squeezed Beats EP",
+        songs: [
+            { name: "Swagmaster's Breakfast", url: "audio/album2/Swagmaster's Breakfast.mp3" },
+            { name: "Junior Varsity Ping Pong Team Theme", url: "audio/album2/Junior Varsity Ping Pong Team Theme.mp3" },
+            { name: "Metal Detector in D# Minor", url: "audio/album2/Metal Detector in D Sharp Minor.mp3" },
+            { name: "Dispenception", url: "audio/album2/Dispenception.mp3" },
+            { name: "Apricots in the Atmosphere", url: "audio/album2/Apricots in the Atmosphere.mp3" }
+        ],
+        otherContent: ""
+    },
+    {
+        header: "Album #1 - Roodimentary Sciences",
+        songs: [
+            { name: "Post-Trib Return to Chicago", url: "audio/album1/01_Post-Trib Return to Chicago.mp3" },
+            { name: "8-Bit Live", url: "audio/album1/02_8-Bit Live.mp3" },
+            { name: "Summer at the South Pole", url: "audio/album1/03_Summer at the South Pole.mp3" },
+            { name: "Straddling the Escarpment", url: "audio/album1/04_Straddling the Escarpment.mp3" },
+            { name: "The Strengths of Twelfths (feat A-Darwin on Bass)", url: "audio/album1/05_The Strengths of Twelfths (feat A-Darwin on Bass).mp3" },
+            { name: "Attack of the Robotic Octopus", url: "audio/album1/06_Attack of the Robotic Octopus.mp3" },
+            { name: "Policemen in Jetpacks", url: "audio/album1/07_Policemen in Jetpacks.mp3" },
+            { name: "Dance of the Arabian Barber", url: "audio/album1/08_Dance of the Arabian Barber.mp3" },
+            { name: "Gravitation Violation", url: "audio/album1/09_Gravitation Violation.mp3" },
+            { name: "The Dog Days of March", url: "audio/album1/10_The Dog Days of March.mp3" },
+            { name: "I'll Give You Anything - Sally Callahan (Roodimentary Sciences Remix)", url: "audio/album1/11_I'll Give You Anything - Sally Callahan (Roodimentary Sciences Remix).mp3" }
+        ],
+        otherContent: ""
+    }//,
+    //{
+    //    header: "About",
+    //    songs: [
+    //        { name: "", url: "" },
+    //        { name: "", url: "" }
+    //    ],
+    //    otherContent: "I'm a follower of Jesus, a web programmer, and an electronic beat maker living in Chicago. -John Rood"
+    //}
+];
+
+ko.bindingHandlers.audioControl = {
+    init: function (element, valueAccessor) {
+        var audioEl = $(element).parent().siblings('audio')[0];
+        if (valueAccessor() == "play") $(element).click(function () {
+            $('.pauseButton').trigger("click");
+            audioEl.play();
+            $(element).siblings().show();
+            $(element).hide();
+        });
+        if (valueAccessor() == "pause") $(element).click(function () {
+            audioEl.pause();
+            $(element).siblings().show();
+            $(element).hide();
+        });
+        if (valueAccessor() == "barArea") {
+            setInterval(function () {
+                var end = parseFloat(audioEl.duration);
+                var howMuchSoFar = parseFloat(audioEl.currentTime);
+                var fraction = howMuchSoFar / end;
+                var percent = (fraction * parseFloat(100)) + "%";
+                $(element).children().css("width", percent);
+            }, 100);
+            $(element).click(function (event) {
+                var end = parseFloat(audioEl.duration);
+                var barAreaWidth = parseFloat($(element).width());
+                var barFromEdge = parseFloat($(element).offset().left);
+                var mouseInBar = parseFloat(event.pageX) - barFromEdge;
+                var barFraction = mouseInBar / barAreaWidth;
+                var newTime = barFraction * end;
+                audioEl.currentTime = newTime;
+            });
+        }
+    }
+}
+
+var accordionItem = 0;
+
+ko.bindingHandlers.setHrefToGrandparentSibling = {
+    init: function (element, valueAccessor) {
+        collapsingEl = $(element).parent().parent().siblings();
+        accordionItem++;
+        collapsingEl.attr("ID", accordionItem);
+        $(element).attr("href", "#" + accordionItem);
+    }
+}
+
 $(document).ready(function () {
-    setInterval(function () {
-        var end = $('#song')[0].duration;
-        var howMuchSoFar = $('#song')[0].currentTime;
-        var fraction = parseFloat(howMuchSoFar) / parseFloat(end);
-        var percent = (fraction * parseFloat(100)) + "%";
-        $('#thebar').css("width", percent);
-    }, 100);
-
-    $('#thebararea').click(function (event) {
-        var end = parseFloat($('#song')[0].duration);
-        var barAreaWidth = parseFloat($('#thebararea').width());
-        var barFromEdge = parseFloat($('#thebararea').offset().left);
-        var mouseInBar = parseFloat(event.pageX) - barFromEdge;
-        var barFraction = mouseInBar / barAreaWidth;
-        var newTime = barFraction * end;
-        $('#song')[0].currentTime = newTime;
-    });
-
-    $('#play').click(function () {
-        $('#song')[0].play()
-        $('#play').hide();
-        $('#pause').show();
-    });
-
-    $('#pause').click(function () {
-        $('#song')[0].pause()
-        $('#pause').hide();
-        $('#play').show();
-    });
+    ko.applyBindings();
     function SetFontSize(){
         if ($(window).width() > 600) {
             $('h1').css({ 'font-size': '96px' });
