@@ -29,10 +29,12 @@ $(document).ready(function () {
         $('#play').show();
     });
     function SetFontSize(){
-        if ($(window).width() < 600) {
-            $('h1').css({ 'font-size': '64px' });
-        } else {
+        if ($(window).width() > 600) {
             $('h1').css({ 'font-size': '96px' });
+        } else if ($(window).width() <= 600 && $(window).width() > 500) {
+            $('h1').css({ 'font-size': '80px' });
+        } else {
+            $('h1').css({ 'font-size': '64px' });
         }
     }
     SetFontSize();
