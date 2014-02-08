@@ -1,0 +1,25 @@
+@font-face {
+    font-family: BebasNeue;
+    src: url('fonts/BebasNeue.otf');
+}
+
+body {
+    background-image: url('img/bg1.png');
+    background-repeat: repeat;
+}
+
+div {
+    font-family: BebasNeue;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+a {
+    cursor: pointer;
+}
+
+h1 {
+    font-weight: normal;
+    letter-spacing: 8px;
+    line-height: 90%;
+}
