@@ -1,6 +1,14 @@
-@font-face {
-    font-family: BebasNeue;
-    src: url('fonts/bebasneue-webfont.eot');
+@font-face{ 
+	font-family: BebasNeue;
+	src: url('fonts/bebasneue-webfont.eot');
+	src: url('fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/bebasneue-webfont.woff') format('woff'),
+	     url('fonts/bebasneue-webfont.ttf') format('truetype');
+    font-family: Roboto;
+	src: url('fonts/Roboto-Regular-webfont.eot');
+	src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+	     url('fonts/Roboto-Regular-webfont.ttf') format('truetype');
 }
 
 body {
@@ -50,4 +58,9 @@ h1 {
 .playerArea {
     margin-bottom: 12px;
     margin-bottom: 12px;
+}
+.regularText {
+    font-family: Roboto;
+    font-size: 14px;
+    letter-spacing: 0px;
 }

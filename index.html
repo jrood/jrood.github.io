@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div data-bind="text: otherContent"></div>
+                            <div data-bind="template: { name: otherContentID }"></div>
                         </div>
                     </div>
                 </div>
@@ -55,3 +55,7 @@
     </div>
 </body>
 </html>
+
+<script type="text/html" id="about-template">
+    <p class="regularText">John Rood is a follower of Jesus, a web programmer and an electronic beat maker living in Chicago.</p>
+</script>

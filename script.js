@@ -1,12 +1,15 @@
 var accordionLayout = [
-    //{
-    //    header: "Samples of Current Projects",
-    //    songs: [
-    //        { name: "title", url: "" },
-    //        { name: "", url: "" }
-    //    ],
-    //    otherContent: ""
-    //},
+    {
+        header: "Samples of Current Projects",
+        songs: [
+            { name: "Dreaming in jQuery", url: "audio/newStuff/Dreaming in jQuery.mp3" },
+            { name: "congregating banana chips", url: "audio/newStuff/Strumming Synth Experimentation.mp3" },
+            { name: "Don't stay in college forever", url: "audio/newStuff/Don't stay in college forever.mp3" },
+            //{ name: "Self-Contained Underwater Jamming Apparatus (SCUJA) A-Darwin on Bass", url: "audio/newStuff/Self-Contained Underwater Jamming Apparatus (SCUJA) (feat A-Darwin on Bass).mp3" },
+            { name: "Pumpkin Stew", url: "audio/newStuff/Pumpkin Stew by Roodimentary Sciences.mp3" }
+        ],
+        otherContentID: ""
+    },
     {
         header: "Album #2 - Freshly Squeezed Beats EP",
         songs: [
@@ -16,7 +19,7 @@ var accordionLayout = [
             { name: "Dispenception", url: "audio/album2/Dispenception.mp3" },
             { name: "Apricots in the Atmosphere", url: "audio/album2/Apricots in the Atmosphere.mp3" }
         ],
-        otherContent: ""
+        otherContentID: ""
     },
     {
         header: "Album #1 - Roodimentary Sciences",
@@ -33,16 +36,13 @@ var accordionLayout = [
             { name: "The Dog Days of March", url: "audio/album1/10_The Dog Days of March.mp3" },
             { name: "I'll Give You Anything - Sally Callahan (Roodimentary Sciences Remix)", url: "audio/album1/11_I'll Give You Anything - Sally Callahan (Roodimentary Sciences Remix).mp3" }
         ],
-        otherContent: ""
-    }//,
-    //{
-    //    header: "About",
-    //    songs: [
-    //        { name: "", url: "" },
-    //        { name: "", url: "" }
-    //    ],
-    //    otherContent: "I'm a follower of Jesus, a web programmer, and an electronic beat maker living in Chicago. -John Rood"
-    //}
+        otherContentID: ""
+    },
+    {
+        header: "About",
+        songs: [],
+        otherContentID: "about-template"
+    }
 ];
 
 ko.bindingHandlers.audioControl = {
