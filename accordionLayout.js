@@ -5,7 +5,6 @@ var accordionLayout = [
             { name: "Dreaming in jQuery", url: "audio/newStuff/Dreaming in jQuery.mp3" },
             { name: "congregating banana chips", url: "audio/newStuff/Strumming Synth Experimentation.mp3" },
             { name: "Don't stay in college forever", url: "audio/newStuff/Don't stay in college forever.mp3" },
-            //{ name: "Self-Contained Underwater Jamming Apparatus (SCUJA) A-Darwin on Bass", url: "audio/newStuff/Self-Contained Underwater Jamming Apparatus (SCUJA) (feat A-Darwin on Bass).mp3" },
             { name: "Pumpkin Stew", url: "audio/newStuff/Pumpkin Stew by Roodimentary Sciences.mp3" }
         ],
         otherContentID: ""
@@ -44,66 +43,3 @@ var accordionLayout = [
         otherContentID: "about-template"
     }
 ];
-
-ko.bindingHandlers.audioControl = {
-    init: function (element, valueAccessor) {
-        var audioEl = $(element).parent().siblings('audio')[0];
-        if (valueAccessor() == "play") $(element).click(function () {
-            $('.pauseButton').trigger("click");
-            audioEl.play();
-            $(element).siblings().show();
-            $(element).hide();
-        });
-        if (valueAccessor() == "pause") $(element).click(function () {
-            audioEl.pause();
-            $(element).siblings().show();
-            $(element).hide();
-        });
-        if (valueAccessor() == "barArea") {
-            setInterval(function () {
-                var end = parseFloat(audioEl.duration);
-                var howMuchSoFar = parseFloat(audioEl.currentTime);
-                var fraction = howMuchSoFar / end;
-                var percent = (fraction * parseFloat(100)) + "%";
-                $(element).children().css("width", percent);
-            }, 100);
-            $(element).click(function (event) {
-                var end = parseFloat(audioEl.duration);
-                var barAreaWidth = parseFloat($(element).width());
-                var barFromEdge = parseFloat($(element).offset().left);
-                var mouseInBar = parseFloat(event.pageX) - barFromEdge;
-                var barFraction = mouseInBar / barAreaWidth;
-                var newTime = barFraction * end;
-                audioEl.currentTime = newTime;
-            });
-        }
-    }
-}
-
-var accordionItem = 0;
-
-ko.bindingHandlers.setHrefToGrandparentSibling = {
-    init: function (element, valueAccessor) {
-        collapsingEl = $(element).parent().parent().siblings();
-        accordionItem++;
-        collapsingEl.attr("ID", accordionItem);
-        $(element).attr("href", "#" + accordionItem);
-    }
-}
-
-$(document).ready(function () {
-    ko.applyBindings();
-    function SetFontSize(){
-        if ($(window).width() > 600) {
-            $('h1').css({ 'font-size': '96px' });
-        } else if ($(window).width() <= 600 && $(window).width() > 500) {
-            $('h1').css({ 'font-size': '80px' });
-        } else {
-            $('h1').css({ 'font-size': '64px' });
-        }
-    }
-    SetFontSize();
-    $(window).resize(function () {
-        SetFontSize();
-    })
-});
