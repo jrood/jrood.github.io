@@ -33,7 +33,7 @@ var accordionLayout = [
             { name: "Dance of the Arabian Barber", url: "audio/album1/08_Dance of the Arabian Barber.mp3" },
             { name: "Gravitation Violation", url: "audio/album1/09_Gravitation Violation.mp3" },
             { name: "The Dog Days of March", url: "audio/album1/10_The Dog Days of March.mp3" },
-            { name: "I'll Give You Anything - Sally Callahan (Roodimentary Sciences Remix)", url: "audio/album1/11_I'll Give You Anything - Sally Callahan (Roodimentary Sciences Remix).mp3" }
+            { name: "I'll Give You Anything - Sally Callahan", url: "audio/album1/11_I'll Give You Anything - Sally Callahan (Roodimentary Sciences Remix).mp3" }
         ],
         otherContentID: ""
     },
