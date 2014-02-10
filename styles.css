@@ -1,14 +1,17 @@
 @font-face{ 
-	font-family: BebasNeue;
+    font-family: 'BebasNeue';
 	src: url('fonts/bebasneue-webfont.eot');
 	src: url('fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
 	     url('fonts/bebasneue-webfont.woff') format('woff'),
-	     url('fonts/bebasneue-webfont.ttf') format('truetype');
-    font-family: Roboto;
+	     url('fonts/bebasneue-webfont.ttf') format('truetype'),
+	     url('fonts/bebasneue-webfont.svg#webfont') format('svg');
+
+    font-family: 'Roboto';
 	src: url('fonts/Roboto-Regular-webfont.eot');
 	src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
 	     url('fonts/Roboto-Regular-webfont.woff') format('woff'),
-	     url('fonts/Roboto-Regular-webfont.ttf') format('truetype');
+	     url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+	     url('fonts/Roboto-Regular-webfont.svg#webfont') format('svg');
 }
 
 body {
