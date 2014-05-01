@@ -1,0 +1,205 @@
+
+.col-12 {
+    width: 100%;
+}
+
+.col-9 {
+    width: 74.99999997%;
+}
+
+.col-8 {
+    width: 66.6664%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-3 {
+    width: 24.999%;
+}
+
+.float {
+    float: left;
+}
+
+.ex-lg-t {margin-top: 30vw; opacity: 0.9;}
+.lg-t {
+    line-height: 7vw;
+    font-weight: 100;
+    font-size: 9vw;
+    color: #009edb;
+}
+.lg-sub {
+    font-weight: 500;
+    font-size: 4vw;
+    color: white;
+}
+.usr {
+    letter-spacing: 0.03em;
+    font-weight: 100;
+    font-size: 3.7vw;
+    margin-bottom: 4vw;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: transparent;
+    /* border: solid; */
+    border-color: white;
+}
+.pass {
+    letter-spacing: 0.03em;
+    font-weight: 100;
+    font-size: 3.7vw;
+    margin-bottom: 6vw;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: transparent;
+    /* border: solid; */
+    border-color: white;
+}
+
+.login-btn {
+    letter-spacing: 0.03em;
+    font-weight: 100;
+    font-size: 3.7vw;
+    margin-bottom: 4vw;
+    width: 100%;
+    text-align: center;
+    color: #19b2ee;
+    background: transparent;
+    border-color: #19b2ee;
+}
+.login-btn:hover{
+    color: #206581;
+    border-color: #206581;
+}
+
+.center-1 {
+    margin: 0 auto;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    white;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    white;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    white;
+}
+
+@-webkit-keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    /* make things invisible upon start */
+    -webkit-animation: appear ease-in 1;
+    /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: appear ease-in 1;
+    animation: appear ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes disappear {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes diappear {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    opacity: 1;
+    /* make things invisible upon start */
+    -webkit-animation: disappear ease-out 0;
+    /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: disappear ease-out 0;
+    animation: disappear ease-out 0;
+    -webkit-animation-fill-mode: forwards;
+    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.center {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4vw;
+}
+.fullscreen_bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background:url('login-bg.jpg')no-repeat;
+
