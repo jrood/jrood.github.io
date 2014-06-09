@@ -2,6 +2,7 @@ var accordionLayout = [
     {
         header: "Samples of Current Projects",
         songs: [
+            { name: "Showshoe Scuffle", url: "audio/newStuff/Showshoe Scuffle.mp3" },
             { name: "Disco Time at the FBI", url: "audio/newStuff/Disco Time at the FBI.mp3" },
             { name: "Dreaming in jQuery", url: "audio/newStuff/Dreaming in jQuery.mp3" },
             { name: "congregating banana chips", url: "audio/newStuff/Strumming Synth Experimentation.mp3" },
