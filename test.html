@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="http://connect.soundcloud.com/sdk.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    </head>
+    <body>
+        <ul id="results">
+            
+        </ul>
+    </body>
+</html>
+
+
+<script>
+SC.initialize({
+  client_id: '526d18723dea6d1493837da24dd03003'
+});
+
+var track_url = 'https://soundcloud.com/roodimentarysciences/swagmasters-breakfast-1';
+// stream track id 293
+SC.stream("/tracks/131359948", function(sound){
+  sound.play();
+});
+</script>
