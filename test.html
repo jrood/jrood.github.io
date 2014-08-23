@@ -25,5 +25,8 @@ $(document).ready(function(){
     $('#pause').click(function(){sound.pause();});
     $('#stop').click(function(){sound.stop();});
   });
+  SC.get('/playlists/48077759', function(playlist) {
+    console.log(playlist.tracks);
+  });
 });
 </script>
