@@ -5,9 +5,10 @@
         <script src="http://connect.soundcloud.com/sdk.js"></script>
     </head>
     <body>
-        <button id="play">play</button>
+<!--         <button id="play">play</button>
         <button id="pause">pause</button>
-        <button id="stop">stop</button>
+        <button id="stop">stop</button> -->
+        <div id="tracks"></div>
     </body>
 </html>
 
@@ -26,6 +27,15 @@ $(document).ready(function(){
     $('#stop').click(function(){sound.stop();});
   });
   SC.get('/playlists/48077759', function(playlist) {
+    $(playlist.tracks).each(function(i,e){
+      var trackDiv = $("<div></div>").appendTo('#tracks');
+      $("<strong>" + e.title + "</strong>").appendTo(trackDiv);
+      SC.stream("/tracks/" + e.id, function(sound){
+        $("<button>play</button>").appendTo(trackDiv).click(function(){sound.play();});
+        $("<button>pause</button>").appendTo(trackDiv).click(function(){sound.pause();});
+        $("<button>stop</button>").appendTo(trackDiv).click(function(){sound.stop();});
+      });
+    });
     console.log(playlist.tracks);
   });
 });
