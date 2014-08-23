@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
     <head>
-        <script src="http://connect.soundcloud.com/sdk.js"></script>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://connect.soundcloud.com/sdk.js"></script>
     </head>
     <body>
-        <ul id="results">
-            
-        </ul>
+        <button id="play">play</button>
+        <button id="pause">pause</button>
+        <button id="stop">stop</button>
     </body>
 </html>
 
@@ -21,7 +21,9 @@ var track_url = 'https://soundcloud.com/roodimentarysciences/swagmasters-breakfa
 // stream track id 293
 $(document).ready(function(){
   SC.stream("/tracks/131359948", function(sound){
-    sound.play();
+    $('#play').click(function(){sound.play();});
+    $('#pause').click(function(){sound.pause();});
+    $('#stop').click(function(){sound.stop();});
   });
 });
 </script>
