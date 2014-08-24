@@ -30,10 +30,13 @@ $(document).ready(function(){
     $(playlist.tracks).each(function(i,e){
       var trackDiv = $("<div></div>").appendTo('#tracks');
       $("<strong>" + e.title + "</strong>").appendTo(trackDiv);
+      var play = $("<button>play</button>").appendTo(trackDiv);
+      var pause = $("<button>pause</button>").appendTo(trackDiv);
+      var stop = $("<button>stop</button>").appendTo(trackDiv);
       SC.stream("/tracks/" + e.id, function(sound){
-        $("<button>play</button>").appendTo(trackDiv).click(function(){sound.play();});
-        $("<button>pause</button>").appendTo(trackDiv).click(function(){sound.pause();});
-        $("<button>stop</button>").appendTo(trackDiv).click(function(){sound.stop();});
+        play.click(function(){sound.play();});
+        pause.click(function(){sound.pause();});
+        stop.click(function(){sound.stop();});
       });
     });
     console.log(playlist.tracks);
