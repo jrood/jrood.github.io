@@ -51,8 +51,10 @@ $(document).ready(function () {
             $('h1').css({ 'font-size': '96px' });
         } else if ($(window).width() <= 600 && $(window).width() > 500) {
             $('h1').css({ 'font-size': '80px' });
-        } else {
+        } else if ($(window).width() <= 500 && $(window).width() > 450) {
             $('h1').css({ 'font-size': '64px' });
+        } else {
+            $('h1').css({ 'font-size': '48px' });
         }
     }
     SetFontSize();
