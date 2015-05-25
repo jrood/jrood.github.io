@@ -10,7 +10,7 @@ var accordionLayout = [
             { name: "My Portion Forever - with Matt Casiple", url: "audio/newStuff/My Portion Forever.mp3" },
             { name: "Snowshoe Scuffle", url: "audio/newStuff/Snowshoe Scuffle.mp3" },
             { name: "congregating banana chips", url: "audio/newStuff/Strumming Synth Experimentation.mp3" },
-            { name: "Don't stay in college forever", url: "audio/newStuff/Don't stay in college forever.mp3" }
+            { name: "Reversing the Polarity", url: "audio/newStuff/Don't stay in college forever.mp3" }
         ],
         otherContentID: ""
     },
