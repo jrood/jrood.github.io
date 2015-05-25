@@ -2,18 +2,25 @@ var accordionLayout = [
     {
         header: "Samples of Current Projects",
         songs: [
-            { name: "Treehouse Enterprise", url: "audio/newStuff/Treehouse Enterprise.mp3" }, 
-            { name: "Bringing Back Argyle", url: "audio/newStuff/Bringing Back Argyle.mp3" },
-        	  { name: "I Left My Hot Air Balloon on the Sears Tower", url: "audio/newStuff/I Left My Hot Air Balloon on the Sears Tower.mp3" },
+        	{ name: "Settle Down", url: "audio/newStuff/Settle Down - Roodimentary Sciences.mp3" },
+            { name: "Treehouse Enterprise", url: "audio/newStuff/Treehouse Enterprise.mp3" },
+        	{ name: "I Left My Hot Air Balloon on the Sears Tower", url: "audio/newStuff/I Left My Hot Air Balloon on the Sears Tower.mp3" },
             { name: "Landing On Saturn's Rings", url: "audio/newStuff/Landing On Saturn's Rings.mp3" },
             { name: "My Portion Forever - with Matt Casiple", url: "audio/newStuff/My Portion Forever.mp3" },
-            { name: "Know You - Sally Callahan (Roodimentary Sciences Mix)", url: "audio/newStuff/Know You - Sally Callahan (Roodimentary Sciences Mix).mp3" },
             { name: "Snowshoe Scuffle", url: "audio/newStuff/Snowshoe Scuffle.mp3" },
-            { name: "Disco Time at the FBI", url: "audio/newStuff/Disco Time at the FBI.mp3" },
-            { name: "Dreaming in jQuery", url: "audio/newStuff/Dreaming in jQuery.mp3" },
             { name: "congregating banana chips", url: "audio/newStuff/Strumming Synth Experimentation.mp3" },
-            { name: "Don't stay in college forever", url: "audio/newStuff/Don't stay in college forever.mp3" },
-            { name: "Pumpkin Stew", url: "audio/newStuff/Pumpkin Stew by Roodimentary Sciences.mp3" }
+            { name: "Don't stay in college forever", url: "audio/newStuff/Don't stay in college forever.mp3" }
+        ],
+        otherContentID: ""
+    },
+    {
+        header: "Album #3 - Stuck Inside of a Spectrogram",
+        songs: [
+            { name: "Pumpkin Stew", url: "audio/album3/Pumpkin Stew by Roodimentary Sciences.mp3" },
+            { name: "Bringing Back Argyle", url: "audio/album3/Bringing Back Argyle.mp3" },
+            { name: "Disco Time at the FBI", url: "audio/album3/Disco Time at the FBI.mp3" },
+            { name: "Dreaming in jQuery", url: "audio/album3/Dreaming in jQuery.mp3" },
+            { name: "Know You (feat. Sally Callahan) [Roodimentary Sciences Mix]", url: "audio/album3/Know You - Sally Callahan (Roodimentary Sciences Mix).mp3" }
         ],
         otherContentID: ""
     },
