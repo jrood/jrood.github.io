@@ -1,20 +1,5 @@
 var accordionLayout = [
     {
-        header: "Samples of Current Projects",
-        songs: [
-        	{ name: "Settle Down", url: "audio/newStuff/Settle Down - Roodimentary Sciences.mp3" },
-        	{ name: "Some kind of glitchy piano jam", url: "audio/newStuff/Some kind of glitchy piano jam.mp3" },
-            { name: "Treehouse Enterprise", url: "audio/newStuff/Treehouse Enterprise.mp3" },
-        	{ name: "I Left My Hot Air Balloon on the Sears Tower", url: "audio/newStuff/I Left My Hot Air Balloon on the Sears Tower.mp3" },
-            { name: "Landing On Saturn's Rings", url: "audio/newStuff/Landing On Saturn's Rings.mp3" },
-            { name: "My Portion Forever - with Matt Casiple", url: "audio/newStuff/My Portion Forever.mp3" },
-            { name: "Snowshoe Scuffle", url: "audio/newStuff/Snowshoe Scuffle.mp3" },
-            { name: "congregating banana chips", url: "audio/newStuff/Strumming Synth Experimentation.mp3" },
-            { name: "Reversing the Polarity", url: "audio/newStuff/Don't stay in college forever.mp3" }
-        ],
-        otherContentID: ""
-    },
-    {
         header: "Album #3 - Stuck Inside of a Spectrogram",
         songs: [
             { name: "Pumpkin Stew", url: "audio/album3/Pumpkin Stew by Roodimentary Sciences.mp3" },
@@ -54,8 +39,18 @@ var accordionLayout = [
         otherContentID: ""
     },
     {
-        header: "About",
-        songs: [],
-        otherContentID: "about-template"
+        header: "Unfinished Things",
+        songs: [
+        	{ name: "Settle Down", url: "audio/newStuff/Settle Down - Roodimentary Sciences.mp3" },
+        	{ name: "Some kind of glitchy piano jam", url: "audio/newStuff/Some kind of glitchy piano jam.mp3" },
+            { name: "Treehouse Enterprise", url: "audio/newStuff/Treehouse Enterprise.mp3" },
+        	{ name: "I Left My Hot Air Balloon on the Sears Tower", url: "audio/newStuff/I Left My Hot Air Balloon on the Sears Tower.mp3" },
+            { name: "Landing On Saturn's Rings", url: "audio/newStuff/Landing On Saturn's Rings.mp3" },
+            { name: "My Portion Forever - with Matt Casiple", url: "audio/newStuff/My Portion Forever.mp3" },
+            { name: "Snowshoe Scuffle", url: "audio/newStuff/Snowshoe Scuffle.mp3" },
+            { name: "congregating banana chips", url: "audio/newStuff/Strumming Synth Experimentation.mp3" },
+            { name: "Reversing the Polarity", url: "audio/newStuff/Don't stay in college forever.mp3" }
+        ],
+        otherContentID: ""
     }
 ];
