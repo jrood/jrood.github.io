@@ -1,5 +1,12 @@
 var accordionLayout = [
     {
+        header: "Single - Snowshoe Scuffle",
+        songs: [
+            { name: "Snowshoe Scuffle", url: "audio/newStuff/Snowshoe Scuffle.mp3" },
+        ],
+        otherContentID: ""
+    },
+    {
         header: "Album #3 - Stuck Inside of a Spectrogram",
         songs: [
             { name: "Pumpkin Stew", url: "audio/album3/Pumpkin Stew by Roodimentary Sciences.mp3" },
@@ -47,7 +54,6 @@ var accordionLayout = [
         	{ name: "I Left My Hot Air Balloon on the Sears Tower", url: "audio/newStuff/I Left My Hot Air Balloon on the Sears Tower.mp3" },
             { name: "Landing On Saturn's Rings", url: "audio/newStuff/Landing On Saturn's Rings.mp3" },
             { name: "My Portion Forever - with Matt Casiple", url: "audio/newStuff/My Portion Forever.mp3" },
-            { name: "Snowshoe Scuffle", url: "audio/newStuff/Snowshoe Scuffle.mp3" },
             { name: "congregating banana chips", url: "audio/newStuff/Strumming Synth Experimentation.mp3" },
             { name: "Reversing the Polarity", url: "audio/newStuff/Don't stay in college forever.mp3" }
         ],
